@@ -3,7 +3,6 @@ const express = require('express');
 const cors = require('cors');
 const sequelize = require("./config/database");
 
-const greenBeckRoutes = require('./routes/greenBeckRoutes.js');
 const userRoutes = require('./routes/userRoutes.js');
 
 const app = express();
@@ -18,11 +17,7 @@ app.use((req, res, next) => {
 });
 
 
-
-app.use('/api/greenbeck', greenBeckRoutes);
 app.use('/api/user', userRoutes);
-
-
 
 sequelize.authenticate()
   .then(() => console.log("Connected to MySQL using Sequelize"))
