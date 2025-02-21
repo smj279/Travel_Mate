@@ -1,9 +1,0 @@
-PORT=4000
-
-DB_NAME=travelmate
-DB_USER=root
-DB_PASS=Rainsum0107@
-DB_HOST=127.0.0.1
-DB_DIALECT=mysql
-
-SECRET=daya_pata_lagao

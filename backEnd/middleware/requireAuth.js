@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const { User } = require('../models');
+const { Client } = require('../models');
 
 const requireAuth = async (req, res, next) => {
   const { authorization } = req.headers;
@@ -12,7 +12,7 @@ const requireAuth = async (req, res, next) => {
 
   try {
     const { id } = jwt.verify(token, process.env.SECRET);
-    const user = await User.findOne({ where: { id }, attributes: ['id'] });
+    const user = await Client.findOne({ where: { id }, attributes: ['id'] });
 
     if (!user) {
       return res.status(401).json({ error: 'User not found' });
