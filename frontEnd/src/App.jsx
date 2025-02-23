@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import { Routes, Route, Navigate } from "react-router-dom";
+
+import { Routes, Route} from "react-router-dom";
 import './App.css'
 import LandingPage from './pages/landingPage.jsx';
 import GreenBeck from './pages/greenbeck.jsx';
 import Login from './pages/login.jsx';
 import SignUp from './pages/signUp.jsx';
 
-function App() {
 
+function App() {
   return (
     <>
       <Routes>
@@ -21,3 +21,6 @@ function App() {
 }
 
 export default App;
+
+
+

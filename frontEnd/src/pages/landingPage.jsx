@@ -1,16 +1,16 @@
-import React from 'react';
+
 import { useNavigate } from 'react-router-dom';
 import { useLogout } from '../hooks/useLogout.jsx';
 import { useAuthContext } from '../hooks/useAuthContext.jsx'
+import './landing.css';
+
 
 const LandingPage = () => {
   const navigate = useNavigate(); 
   const { logout } = useLogout();
   const { user } = useAuthContext();
 
-  const goToGreenbeck = () => {
-    navigate('/greenbeck');
-  };
+  
 
   const handleLogout = () => {
     logout();
@@ -25,9 +25,11 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="landing-page">
-      <h1>Crime Sentinel</h1>
-      <button onClick={goToGreenbeck}>Go to Greenbeck</button>
+    <div className="landingPage">
+      <p className="welcome">Welcome to TravelMate</p>
+            <h1 className="discover">Discover Your Favorite <br /> Place with Us</h1>
+            <p className="motto">Travel to any corner of the world, without going around in circles.</p>
+      
 
       {user && (
         <div>
