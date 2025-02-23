@@ -31,12 +31,12 @@ const LandingPage = () => {
             <p className="motto">Travel to any corner of the world, without going around in circles.</p>
       
 
-      {user && (
+            {user && (
         <div>
-            <br /><br /><br />
-            <span>logged in as {user.email} </span>
-            <br /><br />
-            
+          <br /><br /><br />
+          <span>logged in as {user.email}</span>
+          <br /><br />
+          <button onClick={handleLogout} className="logoutButton">Logout</button>
         </div>
       )}
 
