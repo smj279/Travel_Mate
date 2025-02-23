@@ -1,12 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-
+import LandingPage from './pages/landingPage.jsx';
+import GreenBeck from './pages/greenbeck.jsx';
 
 import LoginPage from "./pages/login.jsx";
 import Navbar from "./pages/navbar.jsx";
 import Footer from "./pages/footer.jsx";
 import Signup from "./pages/signUp.jsx";
-import LandingPage from "./pages/landingPage.jsx";
 import Flight from "./pages/flight.jsx";  // Assuming you have a Flight page
 import Bus from "./pages/bus.jsx";  // Assuming you have a Bus page
 import Hotel from "./pages/hotel.jsx";  // Assuming you have a Hotel page
@@ -42,3 +42,6 @@ function App() {
 }
 
 export default App;
+
+
+
