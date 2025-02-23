@@ -1,20 +1,20 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import LandingPage from './pages/landingPage.jsx';
-import GreenBeck from './pages/greenbeck.jsx';
-
 import LoginPage from "./pages/login.jsx";
 import Navbar from "./pages/navbar.jsx";
 import Footer from "./pages/footer.jsx";
 import Signup from "./pages/signUp.jsx";
 import Flight from "./pages/flight.jsx";  // Assuming you have a Flight page
-import Bus from "./pages/bus.jsx";  // Assuming you have a Bus page
+import Packages from "./pages/Packages.jsx";  
 import Hotel from "./pages/hotel.jsx";  // Assuming you have a Hotel page
-
+import {  Navigate } from "react-router-dom";
+import { useAuthContext } from "./hooks/useAuthContext.jsx";
 
 import "./App.css";
 
 function App() {
+  const { user } = useAuthContext();
   return (
     <>
       {/* Navbar will be visible on all pages */}
@@ -26,10 +26,10 @@ function App() {
           <Route path="/" element={<LandingPage />} />
 
           {/* Other routes */}
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={!user ? <LoginPage /> : <Navigate to={"/"} />} />
+          <Route path="/signup" element={!user ? <Signup /> : <Navigate to={"/"} />} />
           <Route path="/flight" element={<Flight />} />
-          <Route path="/bus" element={<Bus />} />
+          <Route path="/packages" element={<Packages />} />
           <Route path="/hotel" element={<Hotel />} />
           
         </Routes>

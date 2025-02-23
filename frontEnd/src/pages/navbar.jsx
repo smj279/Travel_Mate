@@ -15,7 +15,7 @@ function Navbar() {
       {/* Center: Flight, Bus, Hotel, Tour */}
       <div className="nav-center">
         <Link to="/flight" className="nav-link">Flight</Link>
-        <Link to="/bus" className="nav-link">Bus</Link>
+        <Link to="/packages" className="nav-link">Packages</Link>
         <Link to="/hotel" className="nav-link">Hotel</Link>
         <Link to="/tour" className="nav-link">Tour</Link>
       </div>

@@ -47,6 +47,7 @@
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
   .login-btn:hover {
