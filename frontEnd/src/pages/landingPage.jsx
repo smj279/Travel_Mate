@@ -34,14 +34,13 @@ const LandingPage = () => {
             <br /><br /><br />
             <span>logged in as {user.email} </span>
             <br /><br />
-            <button onClick={handleLogout}>Log out</button>
+            
         </div>
       )}
 
       {!user && (
         <div>
-            <button onClick={goToLogin}>Login</button>
-            <button onClick={goToSignup}>Sign Up</button>
+            
         </div>
       )}
       
