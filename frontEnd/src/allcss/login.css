@@ -1,5 +1,6 @@
 /* Default styles (Desktop first) */
 .login-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,7 +67,9 @@ input {
 }
 
 .back-btn {
-    padding: 10px 15px;
+    padding: 10px ;
+    height: 34.4px ;
+    width: 400px;
     border: none;
     background-color: #6c757d;
     color: white;

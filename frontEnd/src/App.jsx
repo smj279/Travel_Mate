@@ -5,11 +5,12 @@ import LoginPage from "./pages/login.jsx";
 import Navbar from "./pages/navbar.jsx";
 import Footer from "./pages/footer.jsx";
 import Signup from "./pages/signUp.jsx";
-import Flight from "./pages/flight.jsx";  // Assuming you have a Flight page
+import Bus from "./pages/bus.jsx";  // Assuming you have a Flight page
 import Packages from "./pages/Packages.jsx";  
 import Hotel from "./pages/hotel.jsx";  // Assuming you have a Hotel page
 import {  Navigate } from "react-router-dom";
 import { useAuthContext } from "./hooks/useAuthContext.jsx";
+import Experiment from "./pages/table.jsx";
 
 import "./App.css";
 
@@ -28,9 +29,11 @@ function App() {
           {/* Other routes */}
           <Route path="/login" element={!user ? <LoginPage /> : <Navigate to={"/"} />} />
           <Route path="/signup" element={!user ? <Signup /> : <Navigate to={"/"} />} />
-          <Route path="/flight" element={<Flight />} />
+          <Route path="/bus" element={<Bus />} />
           <Route path="/packages" element={<Packages />} />
           <Route path="/hotel" element={<Hotel />} />
+          <Route path="/query" element={<Experiment />} />
+
           
         </Routes>
       </div>
