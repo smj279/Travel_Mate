@@ -5,6 +5,8 @@ const sequelize = require("./config/database");
 
 const userRoutes = require('./routes/userRoutes.js');
 
+const queryRoutes = require('./routes/queryRoutes.js');
+
 const app = express();
 app.use(cors({
     origin: 'http://localhost:5173'  
@@ -19,6 +21,8 @@ app.use((req, res, next) => {
 
 app.use('/api/user', userRoutes);
 
+app.use('/api/query', queryRoutes);
+
 sequelize.authenticate()
   .then(() => console.log("Connected to MySQL using Sequelize"))
   .catch(err => console.error("Database connection error:", err));
@@ -27,3 +31,4 @@ const PORT = process.env.PORT;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+

@@ -74,7 +74,7 @@ const SignUp = () => {
         {error && <div className="error">{error}</div>}
       </form>
 
-      <button onClick={goBack}>Back</button>
+      <button  onClick={goBack} className="back-btn">Back</button>
     </div>
   );
 };
