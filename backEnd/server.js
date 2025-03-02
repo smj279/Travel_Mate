@@ -7,6 +7,9 @@ const userRoutes = require('./routes/userRoutes.js');
 
 const queryRoutes = require('./routes/queryRoutes.js');
 
+const travelPackageRoutes = require('./routes/travelPackageRoutes.js'); 
+
+
 const app = express();
 app.use(cors({
     origin: 'http://localhost:5173'  
@@ -22,6 +25,9 @@ app.use((req, res, next) => {
 app.use('/api/user', userRoutes);
 
 app.use('/api/query', queryRoutes);
+
+app.use('/api/travel_packages', travelPackageRoutes); 
+
 
 sequelize.authenticate()
   .then(() => console.log("Connected to MySQL using Sequelize"))
