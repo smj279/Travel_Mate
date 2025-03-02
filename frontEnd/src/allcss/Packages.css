@@ -38,12 +38,12 @@
   
   /* Pitch Cards Styling */
   .pitch-cards {
-    display: flex;
-    justify-content: space-between;
+    display: grid;  /* Using grid layout instead of flexbox */
+    grid-template-columns: repeat(2, 1fr);  /* Two columns */
+    gap: 20px;  /* Adds space between cards */
   }
   
   .pitch-card {
-    width: 30%;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
@@ -82,5 +82,12 @@
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+  }
+  
+  /* Adjust card layout on smaller screens */
+  @media (max-width: 768px) {
+    .pitch-cards {
+      grid-template-columns: 1fr;  /* Stack cards in one column on small screens */
+    }
   }
   
