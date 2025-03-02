@@ -17,7 +17,7 @@ function Navbar() {
       <Link to="/profile" className="nav-link">Profile</Link>
         <Link to="/bus" className="nav-link">Bus</Link>
         <Link to="/packages" className="nav-link">Packages</Link>
-      
+
  
       </div>
       {/* Right: Login */}
