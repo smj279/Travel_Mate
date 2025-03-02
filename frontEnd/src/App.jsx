@@ -10,7 +10,7 @@ import Hotel from "./pages/hotel.jsx";  // Assuming you have a Hotel page
 import {  Navigate } from "react-router-dom";
 import { useAuthContext } from "./hooks/useAuthContext.jsx";
 import Experiment from "./pages/table.jsx";
-
+import Profile from "./pages/profile.jsx";
 import "./App.css";
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
           <Route path="/packages" element={<Packages />} />
           <Route path="/hotel" element={<Hotel />} />
           <Route path="/query" element={<Experiment />} />
+          <Route path="/profile" element={<Profile />} />
 
           
         </Routes>
